@@ -17,8 +17,11 @@ public class CartDemoTester {
 		PaymentStrategy myPP = new Paypal("gianna.r@monmouth.edu", "password");
 		cart.checkout(myPP);
 		
-		PaymentStrategy myVenmo = new Venmo("gianna.r@monmouth.edu", "password");
+		PaymentStrategy myVenmo = new Venmo("9171234567");
 		cart.checkout(myVenmo);
+		
+		PaymentStrategy myApplePay = new ApplePay("giannarao", "password", "9171234567");
+		cart.checkout(myApplePay);
 	}
 
 }

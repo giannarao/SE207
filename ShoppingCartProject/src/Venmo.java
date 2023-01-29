@@ -2,17 +2,16 @@
 public class Venmo implements PaymentStrategy {
 
 	
-	private String email;
-	private String password;
+	private String phoneNumber;
 		
-	Venmo(String email, String password){
-		this.email = email;
-		this.password = password;
+	Venmo(String phoneNumber){
+		this.phoneNumber = phoneNumber;
+		
 	}
 
 	@Override
 	public void pay (double amount) {
-		System.out.println("Paid " + amount + " with Venmo account: " + this.email);
+		System.out.println("Paid " + amount + " with Venmo account with phone number ending in: " + phoneNumber.substring(6));
 	
 
 	}
